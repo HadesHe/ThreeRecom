@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/build/intermediates/exploded-aar/com.jakewharton/butterknife/8.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a07818a1ecabdb149998823429cce555af4b9cba">
+        <dex dex="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/build/intermediates/pre-dexed/debug/com.jakewharton-butterknife-8.4.0_bd74c30157924dce7513568cfeb523891a0f28d7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/build/intermediates/exploded-aar/com.youth.banner/banner/1.4.9/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="5f49fbc1bda3fa9073a82dd87de3e1ceea24268d">
+        <dex dex="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/build/intermediates/pre-dexed/debug/com.youth.banner-banner-1.4.9_ca1131edcdd6aceb2f0a7148df488a1ae699f61b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zhanghehe/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.5.0/4b0bb6bfbecbdd42b97ff400af342bfe7f32bc83/okhttp-3.5.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4b0bb6bfbecbdd42b97ff400af342bfe7f32bc83">
+        <dex dex="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/build/intermediates/pre-dexed/debug/okhttp-3.5.0_5d6abc617257b65fcc030a30d94939874e810f0c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="30103d98fa5ed824b54af839c85e2111f9bde8ec">
+        <dex dex="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/build/intermediates/pre-dexed/debug/com.android.support-design-25.1.0_17f3a6584f5c2434ed146c1d80fab881fbc841c8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/25.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7f2420506110902f033406b25697cf97ee8c38b2">
+        <dex dex="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/build/intermediates/pre-dexed/debug/com.android.support-cardview-v7-25.1.0_54c261e5153a0f8504627a5d2e7bf09aaf5f4c00.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zhanghehe/.gradle/caches/modules-2/files-2.1/de.greenrobot/eventbus/3.0.0-beta1/d4a559b2dfb3e8a00ed37c440e118584f60db046/eventbus-3.0.0-beta1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d4a559b2dfb3e8a00ed37c440e118584f60db046">
+        <dex dex="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/build/intermediates/pre-dexed/debug/eventbus-3.0.0-beta1_e54fca165a24b4fd138f1ff56b080ba0143dd4cb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zhanghehe/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.7/751f548c85fa49f330cecbb1875893f971b33c4e/gson-2.7.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="751f548c85fa49f330cecbb1875893f971b33c4e">
+        <dex dex="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/build/intermediates/pre-dexed/debug/gson-2.7_ca2b85f0690f223f644671d3be82b3a41393ba33.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/build/intermediates/exploded-aar/cn.jiguang.sdk/jpush/3.0.5/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3442a7f84a1738e2ca8857dc1059b437b7761e03">
+        <dex dex="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/build/intermediates/pre-dexed/debug/cn.jiguang.sdk-jpush-3.0.5_33554ee5d25c75676ad38dec90f74a31086f389e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/25.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b266c8faa5af72e579b9da36ef35053ffed6ac64">
+        <dex dex="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-25.1.0_c9148559fa7ae49f7f732ae526564c6bd245fef9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0a0ef86b7fa568a52bf6214a0326ca1f1d618da7">
+        <dex dex="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-25.1.0_a12b54afe558eba1dac276c472e060aba9cf24d3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f02263e35e52668dd17b73bf961437e3d562b35f">
+        <dex dex="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-25.1.0_f9a5a12d56d51a48cdb9023aadeea82ce9f13066.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/build/intermediates/exploded-aar/com.github.Aspsine/IRecyclerView/0.0.5/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="1c4def5d8da20310e26d7cd42d903209b9e73963">
+        <dex dex="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/build/intermediates/pre-dexed/debug/com.github.Aspsine-IRecyclerView-0.0.5_9bdfb8e975517fb6bee02ded32377fc7eb62a3ff.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/build/intermediates/exploded-aar/com.github.mcxtzhang/SwipeDelMenuLayout/V1.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a38ea10e5094c7ecedf0b8384dd1b92086054f13">
+        <dex dex="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/build/intermediates/pre-dexed/debug/com.github.mcxtzhang-SwipeDelMenuLayout-V1.1.0_a8308c6c3261f7f45db494361660063d6afd2344.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ca3c7aa31e2726a400a6e552b93cb9f63c9a1e6d">
+        <dex dex="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/build/intermediates/pre-dexed/debug/com.android.support-support-compat-25.1.0_ba608ecf3bc31d827842a7898c9274502b18e481.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="aee64634871d88a419d59eb743c1258a60f19700">
+        <dex dex="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-25.1.0_16856900cfa1cd62ae41ddd0ca0012ed9be2139b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/libs/commons-httpclient-3.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="964cd74171f427720480efdec40a7c7f6e58426a">
+        <dex dex="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/build/intermediates/pre-dexed/debug/commons-httpclient-3.1_df6f9322e16412d71d47b4ffd1c1319dc0b28ab5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/build/intermediates/exploded-aar/me.zhanghai.android.materialratingbar/library/1.0.2/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0778b635a29c162f2ac3646a856f570529bad6c2">
+        <dex dex="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/build/intermediates/pre-dexed/debug/me.zhanghai.android.materialratingbar-library-1.0.2_3af3d4326dc66c19cdbd6b0655f86f218e8a051a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/build/intermediates/exploded-aar/cn.jiguang.sdk/jcore/1.1.2/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7307428a730fbc49ea2db2030a73aee2818f050a">
+        <dex dex="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/build/intermediates/pre-dexed/debug/cn.jiguang.sdk-jcore-1.1.2_a3ad62a4422e32df4c0b69e4434e4dc1f4db8d07.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/libs/fastjson-1.2.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b3cd06ff3f21c8cf487c241ed145154fbae6b4e2">
+        <dex dex="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/build/intermediates/pre-dexed/debug/fastjson-1.2.2_d969c66f524251d6d400c8f1f64d9f3abc5fc245.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/build/intermediates/exploded-aar/cn.jiguang.sdk/jcore/1.1.2/jars/libs/jcore-android_v1.1.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="bd9236d57409592b26609d13554b052dacf1c380">
+        <dex dex="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/build/intermediates/pre-dexed/debug/jcore-android_v1.1.2_7b44e071b197c75039927d8f4e21ae1497114be8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="1630658fbc2d222b988603c27b4a4249586fbfe7">
+        <dex dex="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-25.1.0_09ea3bf859ead339a6ef46d8d804517f9aa06b00.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zhanghehe/Library/Android/sdk/build-tools/25.0.2/renderscript/lib/renderscript-v8.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="05668b8cd6c7b07f152b6a5b4c6cff620817ba0f">
+        <dex dex="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/build/intermediates/pre-dexed/debug/renderscript-v8_1754e582ff0bbdcdfee6b9e50e5f3d5378da1765.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="2a53c4f3518116b8c6aee0e477233f0f7da8616f">
+        <dex dex="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-25.1.0_493ed889de839cdfc5174479fa7ed47b9dfefa6a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zhanghehe/.gradle/caches/modules-2/files-2.1/org.reactivestreams/reactive-streams/1.0.0/14b8c877d98005ba3941c9257cfe09f6ed0e0d74/reactive-streams-1.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="14b8c877d98005ba3941c9257cfe09f6ed0e0d74">
+        <dex dex="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/build/intermediates/pre-dexed/debug/reactive-streams-1.0.0_4fb3713ec55cbfbac49fd19ec651a5cb1bdb94a1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/libs/log4j-1.2.17.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="5af35056b4d257e4b64b9e8069c0746e8b08629f">
+        <dex dex="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/build/intermediates/pre-dexed/debug/log4j-1.2.17_39dc76885d1fcfe3e3612868b9f73a726100ced2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e79aa3d9a16f8c9f16377c0608de70a8f31e5d80">
+        <dex dex="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-25.1.0_8fccd20b92b7ef71ef3b3634d7fceebbb02d95ae.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-25.1.0_59eb01d05bb603cbadb907ed954ea5a2f545cb47.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/build/intermediates/exploded-aar/com.google.android/flexbox/0.3.0-alpha2/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0bdc2af12eae42ddfdc290c4f8ce3c7dc7e0dcf1">
+        <dex dex="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/build/intermediates/pre-dexed/debug/com.google.android-flexbox-0.3.0-alpha2_a78bedf97df1af9146592290c583d384393e3fa5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6fb6ac3e8d3b9013819920d9ea11f3803c4c0033">
+        <dex dex="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-25.1.0_abe683dcb2870644a6078449e58e27f9e661963a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zhanghehe/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.1.0/support-annotations-25.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="64cb6b229a8bdfd907bc8dd46839a0053e4c018d">
+        <dex dex="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/build/intermediates/pre-dexed/debug/support-annotations-25.1.0_eaf130325efc711cfc4ab9abf266bfb744b20133.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/build/intermediates/exploded-aar/io.reactivex.rxjava2/rxandroid/2.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4119ea97a7191ff9b8f33b534ea220448f62f491">
+        <dex dex="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/build/intermediates/pre-dexed/debug/io.reactivex.rxjava2-rxandroid-2.0.1_c4f5eaae40c89b53711e4c786bc568713184ab1e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zhanghehe/.gradle/caches/modules-2/files-2.1/com.jakewharton.retrofit/retrofit2-rxjava2-adapter/1.0.0/e117362a2103f8ec01091ebd2f40aca4e1ada599/retrofit2-rxjava2-adapter-1.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e117362a2103f8ec01091ebd2f40aca4e1ada599">
+        <dex dex="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/build/intermediates/pre-dexed/debug/retrofit2-rxjava2-adapter-1.0.0_a2968e9bd21572a30d7a4f05acc634e83c8a0bcd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zhanghehe/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/converter-gson/2.1.0/aa557d71ead91cbf26e0c316a0f593d168303309/converter-gson-2.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="aa557d71ead91cbf26e0c316a0f593d168303309">
+        <dex dex="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/build/intermediates/pre-dexed/debug/converter-gson-2.1.0_be22c8efa7e446cd25139cfe1dccac1c5dd3f0ed.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/build/intermediates/exploded-aar/cn.jiguang.sdk/jpush/3.0.5/jars/libs/jpush-android_v3.0.5.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d3dd93e279ba1e25d3f611a386a98ebf730cba73">
+        <dex dex="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/build/intermediates/pre-dexed/debug/jpush-android_v3.0.5_860a4d1f35216711dd0d3d5c3ff3fae1c77e3e0d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zhanghehe/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/glide/3.7.0/9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4/glide-3.7.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4">
+        <dex dex="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/build/intermediates/pre-dexed/debug/glide-3.7.0_80abaf67c4f091c149485ef07e2967b554dc72f1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zhanghehe/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.11.0/840897fcd7223a8143f1d9b6f69714e7be34fd50/okio-1.11.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="840897fcd7223a8143f1d9b6f69714e7be34fd50">
+        <dex dex="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/build/intermediates/pre-dexed/debug/okio-1.11.0_37a1df6744eb4adce46d20eb85c559824b16d5ca.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zhanghehe/.gradle/caches/modules-2/files-2.1/io.reactivex.rxjava2/rxjava/2.0.4/cbcf91e47e43607fb628b11b3571f212f11a6f84/rxjava-2.0.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="cbcf91e47e43607fb628b11b3571f212f11a6f84">
+        <dex dex="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/build/intermediates/pre-dexed/debug/rxjava-2.0.4_04b0486d3d95865fb82db61d688279257a42ddae.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zhanghehe/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/retrofit/2.1.0/2de7cd8b95b7021b1d597f049bcb422055119f2c/retrofit-2.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="2de7cd8b95b7021b1d597f049bcb422055119f2c">
+        <dex dex="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/build/intermediates/pre-dexed/debug/retrofit-2.1.0_9dfa7d9002f01e8774915eed513da8b0aaa874dc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zhanghehe/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife-annotations/8.4.0/ea392375cf9ff59234a82e7928a204215ccc98cd/butterknife-annotations-8.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ea392375cf9ff59234a82e7928a204215ccc98cd">
+        <dex dex="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/build/intermediates/pre-dexed/debug/butterknife-annotations-8.4.0_23f55226eca883c0f25c222fc341f929b62aff14.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/build/intermediates/exploded-aar/com.android.support/percent/25.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="01acd167d64a3835490f0d058c9e9052a514797c">
+        <dex dex="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/build/intermediates/pre-dexed/debug/com.android.support-percent-25.1.0_8b42fd7fe48f4c3e941f090048e91b12c00b4135.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zhanghehe/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/logging-interceptor/3.5.0/94c11f915bfe1aeaa5ef6351ddfbe58bae1ea397/logging-interceptor-3.5.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="94c11f915bfe1aeaa5ef6351ddfbe58bae1ea397">
+        <dex dex="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/build/intermediates/pre-dexed/debug/logging-interceptor-3.5.0_787a31b2e53801122bb16767ae3f936d865b20bf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/build/intermediates/exploded-aar/com.android.support/transition/25.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d38084015027549951cbaea5d5f6fb795cc81151">
+        <dex dex="/Users/zhanghehe/StudioProjects/SmartRecom/SmartRecom/ThreeRecom/app/build/intermediates/pre-dexed/debug/com.android.support-transition-25.1.0_6117c05a991dd9a0ddde100c726f5f3468288a9c.jar" />
+    </item>
+
+</items>
