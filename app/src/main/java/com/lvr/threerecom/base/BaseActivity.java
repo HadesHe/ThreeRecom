@@ -31,11 +31,11 @@ public abstract class BaseActivity extends AppCompatActivity {
         doBeforeSetcontentView();
         setContentView(getLayoutId());
         // 默认着色状态栏
-        SetStatusBarColor();
+        setStatusBarColor();
         mUnbinder = ButterKnife.bind(this);
         mContext = this;
-        this.initPresenter();
-        this.initView();
+        initPresenter();
+        initView();
 
     }
 
@@ -68,14 +68,14 @@ public abstract class BaseActivity extends AppCompatActivity {
     /**
      * 着色状态栏（4.4以上系统有效）
      */
-    protected void SetStatusBarColor() {
+    protected void setStatusBarColor() {
         StatusBarSetting.setColor(this, getResources().getColor(R.color.colorPrimary));
     }
 
     /**
      * 着色状态栏（4.4以上系统有效）
      */
-    protected void SetStatusBarColor(int color) {
+    protected void setStatusBarColor(int color) {
         StatusBarSetting.setColor(this, color);
     }
 
@@ -125,20 +125,6 @@ public abstract class BaseActivity extends AppCompatActivity {
         }
         startActivity(intent);
     }
-
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-
-    }
-
 
     @Override
     protected void onDestroy() {
