@@ -36,10 +36,10 @@ import com.lvr.threerecom.app.AppConstantValue;
 import com.lvr.threerecom.base.BaseActivity;
 import com.lvr.threerecom.bean.LoginBean;
 import com.lvr.threerecom.bean.MovieInfo;
+import com.lvr.threerecom.module.home.MainContract;
 import com.lvr.threerecom.ui.home.AboutActivity;
 import com.lvr.threerecom.ui.home.MyInformationActivity;
-import com.lvr.threerecom.ui.home.presenter.impl.MainPresenterImpl;
-import com.lvr.threerecom.ui.home.view.MainView;
+import com.lvr.threerecom.module.home.MainPresenterImpl;
 import com.lvr.threerecom.ui.login.LoginActivity;
 import com.lvr.threerecom.ui.movie.MovieDetailActivity;
 import com.lvr.threerecom.ui.movie.MovieDisplayActivity;
@@ -58,7 +58,7 @@ import de.greenrobot.event.EventBus;
 import de.greenrobot.event.Subscribe;
 import de.greenrobot.event.ThreadMode;
 
-public class MainActivity extends BaseActivity implements NavigationView.OnNavigationItemSelectedListener, MainView, OnRefreshListener, MainAdapter.onItemClickListenr {
+public class MainActivity extends BaseActivity implements NavigationView.OnNavigationItemSelectedListener, MainContract.MainView, OnRefreshListener, MainAdapter.onItemClickListenr {
 
     @BindView(R.id.toolbar)
     Toolbar mToolbar;
@@ -83,7 +83,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
 
     @Override
     public void initPresenter() {
-        mPresenter = new MainPresenterImpl(this, this);
+        mPresenter = new MainPresenterImpl(this);
     }
 
     @Override

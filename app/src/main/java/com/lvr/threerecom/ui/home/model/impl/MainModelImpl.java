@@ -4,7 +4,7 @@ import com.lvr.threerecom.api.ApiService;
 import com.lvr.threerecom.app.AppApplication;
 import com.lvr.threerecom.bean.MovieInfo;
 import com.lvr.threerecom.client.RetrofitClient;
-import com.lvr.threerecom.ui.home.model.MainModel;
+import com.lvr.threerecom.module.home.MainContract;
 
 import java.util.List;
 import java.util.Map;
@@ -16,7 +16,7 @@ import io.reactivex.functions.Function;
  * Created by lvr on 2017/4/24.
  */
 
-public class MainModelImpl implements MainModel {
+public class MainModelImpl implements MainContract.MainModel {
     @Override
     public Observable<List<MovieInfo>> loadHotMovie() {
         RetrofitClient retrofitClient = RetrofitClient.getInstance(AppApplication.getAppContext(), ApiService.MOVIE_BASE_URL_HOT);
