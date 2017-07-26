@@ -23,11 +23,9 @@ import io.reactivex.disposables.Disposable;
 public class MainPresenterImpl implements MainPresenter {
     private MainView mMainView;
     private MainModel mMainModel;
-    private Context mContext;
 
-    public MainPresenterImpl(Context context, MainView mainView) {
+    public MainPresenterImpl(MainView mainView) {
         this.mMainView = mainView;
-        this.mContext = context;
         mMainModel = new MainModelImpl();
     }
 

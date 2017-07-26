@@ -83,7 +83,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
 
     @Override
     public void initPresenter() {
-        mPresenter = new MainPresenterImpl(this, this);
+        mPresenter = new MainPresenterImpl(this);
     }
 
     @Override
