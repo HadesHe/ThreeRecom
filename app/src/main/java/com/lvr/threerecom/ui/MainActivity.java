@@ -58,8 +58,9 @@ import de.greenrobot.event.EventBus;
 import de.greenrobot.event.Subscribe;
 import de.greenrobot.event.ThreadMode;
 
-public class MainActivity extends BaseActivity implements NavigationView.OnNavigationItemSelectedListener, MainContract.MainView, OnRefreshListener, MainAdapter.onItemClickListenr {
+public class MainActivity extends BaseActivity implements NavigationView.OnNavigationItemSelectedListener, MainContract.MainView, OnRefreshListener, MainAdapter.onItemClickListenr, View.OnClickListener {
 
+    public static final long TIME_KEEP_LOGIN_STATUS = 7 * 24 * 3600 * 1000;
     @BindView(R.id.toolbar)
     Toolbar mToolbar;
     @BindView(R.id.navigation)
@@ -89,89 +90,108 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
     @Override
     public void initView() {
         StatusBarSetting.setColorForDrawerLayout(this, mDrawerLayout, getResources().getColor(R.color.colorPrimary), StatusBarSetting.DEFAULT_STATUS_BAR_ALPHA);
-        setToolBar();
-        setNavigationView();
-        initData();
+        initToolBarView();
+        initToolBarData();
+        initNavigationView();
+        initNavigationData();
+        initRvView();
         mPresenter.requestHotMoviee();
-        initLoginState();
-        initSensorService();
-        if(!EventBus.getDefault().isRegistered(this)){
-            EventBus.getDefault().register(this);
-        }
-        updateLoginUI();
+
+        initData();
+        registerToEventBus();
 
     }
+
+    private void initData() {
+
+        if (checkLoginStatus()) {
+            startSensorService();
+            updateLoginUI();
+        } else {
+            SPUtils.setSharedBooleanData(AppApplication.getAppContext(), "isLogin", false);
+        }
+
+    }
+
+    private void registerToEventBus() {
+        if (!EventBus.getDefault().isRegistered(this)) {
+            EventBus.getDefault().register(this);
+        }
+    }
+
 
     /**
      * 判断状态为登录后 更新UI
      */
     private void updateLoginUI() {
-        Boolean isLogin = SPUtils.getSharedBooleanData(AppApplication.getAppContext(), "isLogin");
-        if(isLogin){
-            String nickname = SPUtils.getSharedStringData(AppApplication.getAppContext(), "nickname");
-            String userid = SPUtils.getSharedStringData(AppApplication.getAppContext(), "userid");
-            String age = SPUtils.getSharedStringData(AppApplication.getAppContext(), "age");
-            String gender = SPUtils.getSharedStringData(AppApplication.getAppContext(), "gender");
-            String movie_preference = SPUtils.getSharedStringData(AppApplication.getAppContext(), "movie_preference");
-            String music_preference = SPUtils.getSharedStringData(AppApplication.getAppContext(), "music_preference");
-            String url = SPUtils.getSharedStringData(AppApplication.getAppContext(), "photoUrl");
-            LoginBean loginBean = new LoginBean();
-            if(!nickname.isEmpty()){
-                loginBean.setNickname(nickname);
-            }
-            if(!age.isEmpty()){
-                loginBean.setAge(Integer.parseInt(age));
-            }
-            if(!movie_preference.isEmpty()){
-                loginBean.setMovie_preference(movie_preference);
-            }
-            if(!music_preference.isEmpty()){
-                loginBean.setMusic_preference(music_preference);
-            }
-            if(!userid.isEmpty()){
-                loginBean.setUserid(userid);
-            }
-            if(!gender.isEmpty()){
-                loginBean.setSex(gender);
-            }
-            if(!url.isEmpty()){
-                loginBean.setUser_photo_url(url);
-            }
-            EventBus.getDefault().post(loginBean);
+        String nickname = SPUtils.getSharedStringData(AppApplication.getAppContext(), "nickname");
+        String userid = SPUtils.getSharedStringData(AppApplication.getAppContext(), "userid");
+        String age = SPUtils.getSharedStringData(AppApplication.getAppContext(), "age");
+        String gender = SPUtils.getSharedStringData(AppApplication.getAppContext(), "gender");
+        String movie_preference = SPUtils.getSharedStringData(AppApplication.getAppContext(), "movie_preference");
+        String music_preference = SPUtils.getSharedStringData(AppApplication.getAppContext(), "music_preference");
+        String url = SPUtils.getSharedStringData(AppApplication.getAppContext(), "photoUrl");
+        LoginBean loginBean = new LoginBean();
+        if (!nickname.isEmpty()) {
+            loginBean.setNickname(nickname);
         }
+        if (!age.isEmpty()) {
+            loginBean.setAge(Integer.parseInt(age));
+        }
+        if (!movie_preference.isEmpty()) {
+            loginBean.setMovie_preference(movie_preference);
+        }
+        if (!music_preference.isEmpty()) {
+            loginBean.setMusic_preference(music_preference);
+        }
+        if (!userid.isEmpty()) {
+            loginBean.setUserid(userid);
+        }
+        if (!gender.isEmpty()) {
+            loginBean.setSex(gender);
+        }
+        if (!url.isEmpty()) {
+            loginBean.setUser_photo_url(url);
+        }
+        EventBus.getDefault().post(loginBean);
     }
 
     /**
      * 初始化登录状态 默认登陆保持7天
      */
-    private void initLoginState() {
+    private boolean checkLoginStatus() {
         Boolean isLogin = SPUtils.getSharedBooleanData(AppApplication.getAppContext(), "isLogin");
-        if(isLogin){
-            //查看登录日期有没有保持7天
-            long date = SPUtils.getSharedlongData(AppApplication.getAppContext(), "loginDate");
-            if(System.currentTimeMillis()-date>7*24*3600*1000){
-                SPUtils.setSharedBooleanData(AppApplication.getAppContext(), "isLogin",false);
-            }
+        if (isLogin && inOneweek()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    private boolean inOneweek() {
+        long date = SPUtils.getSharedlongData(AppApplication.getAppContext(), "loginDate");
+        if (System.currentTimeMillis() - date > TIME_KEEP_LOGIN_STATUS) {
+            return false;
+        } else {
+            return true;
         }
     }
 
     /**
      * 开启传感器采集数据的远程进程
      */
-    private void initSensorService() {
+    private void startSensorService() {
         //已经登录后再开启采集数据
-        if(SPUtils.getSharedBooleanData(AppApplication.getAppContext(), "isLogin")){
-            mIntent = new Intent();
-            mIntent.setAction("com.sensor.service");
-            mIntent.setPackage(getPackageName());
-            startService(mIntent);
-        }
+        mIntent = new Intent();
+        mIntent.setAction("com.sensor.service");
+        mIntent.setPackage(getPackageName());
+        startService(mIntent);
     }
 
     /**
      * 设置RecyclerView相关数据
      */
-    private void initData() {
+    private void initRvView() {
         mMainAdapter = new MainAdapter(mContext, mList);
         GridLayoutManager manager = new GridLayoutManager(mContext, 2, GridLayoutManager.VERTICAL, false);
         manager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
@@ -191,16 +211,18 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         mRvContent.setIAdapter(new ScaleInAnimationAdapter(mMainAdapter));
     }
 
-    private void setNavigationView() {
+    private void initNavigationView() {
         //NavigationView初始化
         mNavigation.setItemIconTintList(null);
         View headerView = mNavigation.getHeaderView(0);
         mIv_photo = (ImageView) headerView.findViewById(R.id.iv_user_photo);
         mMTv_login = (TextView) headerView.findViewById(R.id.tv_login);
+    }
+
+    private void initNavigationData() {
         mNavigation.setNavigationItemSelectedListener(this);
         setHomeItemState();
         login();
-
     }
 
     @Override
@@ -208,7 +230,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         super.onRestart();
         setHomeItemState();
         //在登陆后的状态下，再次开启采集数据
-        initSensorService();
+        startSensorService();
     }
 
     /**
@@ -225,18 +247,19 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
 
     /**
      * 接收到登录成功的消息
+     *
      * @param bean
      */
     @Subscribe(threadMode = ThreadMode.MainThread)
     public void onLogInEvent(LoginBean bean) {
         String url = bean.getUser_photo_url();
-        if(url!=null&&!url.isEmpty()){
+        if (url != null && !url.isEmpty()) {
             //更新头像
-            if(mIv_photo!=null){
-                if(url.startsWith("http")){
+            if (mIv_photo != null) {
+                if (url.startsWith("http")) {
                     //网络图片
-                    ImageLoaderUtils.displayRound(MainActivity.this,mIv_photo,url);
-                }else{
+                    ImageLoaderUtils.displayRound(MainActivity.this, mIv_photo, url);
+                } else {
                     //本地图片
                     final File file = new File(url);
                     mIv_photo.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
@@ -258,16 +281,16 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
                         }
                     });
                 }
-                System.out.println("图片url:"+url);
+                System.out.println("图片url:" + url);
             }
         }
         String nickname = bean.getNickname();
-        if(nickname!=null&&!nickname.isEmpty()){
-            if(mMTv_login!=null){
+        if (nickname != null && !nickname.isEmpty()) {
+            if (mMTv_login != null) {
                 mMTv_login.setText(nickname);
             }
-        }else{
-            if(mMTv_login!=null){
+        } else {
+            if (mMTv_login != null) {
                 mMTv_login.setText("已登录，完善信息为你提供更多服务");
             }
         }
@@ -280,22 +303,17 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
             }
         });
     }
+
     /**
      * 跳转到登录界面
-     *
      */
     private void login() {
 
-        mIv_photo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                LoginActivity.startAction(MainActivity.this);
-            }
-        });
+        mIv_photo.setOnClickListener(this);
     }
 
-    private void setToolBar() {
-        mToolbar.setTitle("首页");//设置标题
+    private void initToolBarView() {
+
         setSupportActionBar(mToolbar);
         ActionBar actionBar = getSupportActionBar();
         //菜单按钮可用
@@ -308,7 +326,13 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         //设置drawlayout的监听事件 打开/关闭
         mDrawerLayout.setDrawerListener(abdt);
         //actionbar中的内容进行初始化
+
+    }
+
+    private void initToolBarData() {
+        mToolbar.setTitle("首页");//设置标题
         mToolbar.setTitleTextColor(getResources().getColor(R.color.white));
+
     }
 
 
@@ -328,13 +352,13 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
                 MusicActivity.startAction(MainActivity.this);
                 break;
             }
-            case R.id.mn_information:{
-                if(SPUtils.getSharedBooleanData(AppApplication.getAppContext(),"isLogin")){
+            case R.id.mn_information: {
+                if (SPUtils.getSharedBooleanData(AppApplication.getAppContext(), "isLogin")) {
                     //已经登录了
                     Intent intent = new Intent(MainActivity.this, MyInformationActivity.class);
                     startActivity(intent);
 
-                }else{
+                } else {
                     //提示还未登录
                     AlertDialog.Builder builder = new AlertDialog.Builder(this);
                     builder.setTitle("提示");
@@ -351,27 +375,27 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
 
                 break;
             }
-            case R.id.mn_about:{
+            case R.id.mn_about: {
                 //跳转到关于页面
                 Intent intent = new Intent(MainActivity.this, AboutActivity.class);
                 startActivity(intent);
                 break;
             }
-            case R.id.mn_out:{
+            case R.id.mn_out: {
                 //注销登录
-                if(SPUtils.getSharedBooleanData(AppApplication.getAppContext(),"isLogin")){
+                if (SPUtils.getSharedBooleanData(AppApplication.getAppContext(), "isLogin")) {
                     //1.清除SharedPreference中的内容
-                    SPUtils.setSharedBooleanData(AppApplication.getAppContext(),"isLogin",false);
-                    SPUtils.setSharedStringData(AppApplication.getAppContext(), "nickname",null);
-                    SPUtils.setSharedStringData(AppApplication.getAppContext(), "age",null);
-                    SPUtils.setSharedStringData(AppApplication.getAppContext(), "gender",null);
-                    SPUtils.setSharedStringData(AppApplication.getAppContext(), "movie_preference",null);
-                    SPUtils.setSharedStringData(AppApplication.getAppContext(), "music_preference",null);
-                    SPUtils.setSharedlongData(AppApplication.getAppContext(),"loginDate",0);
-                    SPUtils.setSharedStringData(AppApplication.getAppContext(),"userid",null);
-                    SPUtils.setSharedStringData(AppApplication.getAppContext(),"photoUrl",null);
+                    SPUtils.setSharedBooleanData(AppApplication.getAppContext(), "isLogin", false);
+                    SPUtils.setSharedStringData(AppApplication.getAppContext(), "nickname", null);
+                    SPUtils.setSharedStringData(AppApplication.getAppContext(), "age", null);
+                    SPUtils.setSharedStringData(AppApplication.getAppContext(), "gender", null);
+                    SPUtils.setSharedStringData(AppApplication.getAppContext(), "movie_preference", null);
+                    SPUtils.setSharedStringData(AppApplication.getAppContext(), "music_preference", null);
+                    SPUtils.setSharedlongData(AppApplication.getAppContext(), "loginDate", 0);
+                    SPUtils.setSharedStringData(AppApplication.getAppContext(), "userid", null);
+                    SPUtils.setSharedStringData(AppApplication.getAppContext(), "photoUrl", null);
                     //2.关闭服务
-                    if(mIntent!=null){
+                    if (mIntent != null) {
                         stopService(mIntent);
                     }
                     //3.页面回显
@@ -383,16 +407,16 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
                             LoginActivity.startAction(MainActivity.this);
                         }
                     });
-                    Toast.makeText(MainActivity.this,"注销成功",Toast.LENGTH_SHORT).show();
-                }else{
-                    Toast.makeText(MainActivity.this,"还未登录",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "注销成功", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(MainActivity.this, "还未登录", Toast.LENGTH_SHORT).show();
                 }
 
 
                 break;
             }
-            case R.id.mn_guess:{
-                Toast.makeText(MainActivity.this,"该功能还未实现，敬请期待",Toast.LENGTH_SHORT).show();
+            case R.id.mn_guess: {
+                Toast.makeText(MainActivity.this, "该功能还未实现，敬请期待", Toast.LENGTH_SHORT).show();
                 break;
             }
 
@@ -431,6 +455,15 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
             ActivityOptionsCompat options = ActivityOptionsCompat
                     .makeScaleUpAnimation(imageView, imageView.getWidth() / 2, imageView.getHeight() / 2, 0, 0);
             ActivityCompat.startActivity((Activity) mContext, intent, options.toBundle());
+        }
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.iv_user_photo:
+                LoginActivity.startAction(MainActivity.this);
+                break;
         }
     }
 }
